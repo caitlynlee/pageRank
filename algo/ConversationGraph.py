@@ -71,7 +71,7 @@ class ConversationGraph:
             subRatings.append(0)
             mat.append(subRatings)
 
-        self.mat = np.array(mat)
+        self.mat = np.array(mat).T
 
     def getStochasticGraph(self, method='Proportion'):
 
