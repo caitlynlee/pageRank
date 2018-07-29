@@ -1,6 +1,7 @@
 from __future__ import division
 import csv
 import numpy as np
+from decimal import Decimal
 
 
 # Going to store the graphs as dicts
@@ -66,7 +67,7 @@ class ConversationGraph:
                     subRatings.append(0)
 
                 # Otherwise append to row
-                subRatings.append(int(row[attrCol]))
+                subRatings.append(Decimal(row[attrCol]))
 
             subRatings.append(0)
             mat.append(subRatings)
